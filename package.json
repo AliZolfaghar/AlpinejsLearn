@@ -1,0 +1,32 @@
+{
+  "name": "alpinejslearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliZolfaghar/AlpinejsLearn.git"
+  },
+  "keywords": [
+    "sample",
+    "project",
+    "for",
+    "my",
+    "students",
+    "in",
+    "alpinejs",
+    "classes"
+  ],
+  "author": "azolfaghar@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliZolfaghar/AlpinejsLearn/issues"
+  },
+  "homepage": "https://github.com/AliZolfaghar/AlpinejsLearn#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

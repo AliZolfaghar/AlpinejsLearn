@@ -1,0 +1,15 @@
+ver 1.0.2 
+    [X] add remain days badge 
+    [X] add end date badge   
+    [X] link percentage circles to remain days to show how much is the task completed 
+
+ver 1.0.1 
+    [X] add required days to complete tasks 
+    [X] some typo fixes 
+
+ver 1.0.0
+    [X] initial app design 
+    [X] add percentage circles 
+
+
+
