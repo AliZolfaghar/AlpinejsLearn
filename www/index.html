@@ -164,6 +164,17 @@
                     ipercent : 20 ,                     
                  
                 }
+                app2 = function () {                    
+                    return {
+                        percent : 20 , 
+                        setData(){
+                            this.percent = 90 ; 
+                        },                        
+                        sclass(){
+                            return 'c100 p' + this.percent + ' small green float-left'
+                        }, 
+                    };
+                };
             </script>
             <div class="col-md-4 mb-3">
                 <div class="card">
@@ -171,9 +182,31 @@
                         circle percent using csi include
                     </div>
                     <div class="card-body">
+
                         <div x-data="">
                             <span ></span>
                             <!-- <div data-include="circle.html" ></div> -->
+
+                        <div x-data="app2">
+                            <span x-text="sclass()"></span>
+
+                            <div class="form">
+                                
+                                <div class="input-group">
+                                    <input class="form-control" type="number" x-model="percent"> 
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" >
+                                            <span x-text="percent"></span> % 
+                                        </span> 
+                                    </div>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" x-on:click="setData()">test</button>
+                                    </div>
+                                </div>
+                                
+                                <div data-include="circle.html" ></div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -189,7 +222,19 @@
                         title
                     </div>
                     <div class="card-body">
-                        data
+                        
+                        <div x-data="{ greeting: 'Hello' }">
+                            <div x-data="{ name: 'Caleb' }">
+                                <button @click="sayHello($data)">Say Hello</button>
+                            </div>
+                        </div>
+                         
+                        <script>
+                            function sayHello({ greeting, name }) {
+                                alert(greeting + ' ' + name + '!')
+                            }
+                        </script>
+                        
                     </div>
                 </div>
             </div>
