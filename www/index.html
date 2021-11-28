@@ -19,7 +19,7 @@
     <!-- add dynamic include in html -->
     <script src="/js/csi.min.js" defer></script>
     
-    <script src="/js/alpine.min.js" defer></script>
+    <script src="/js/alpine.3.5.2.min.js" defer></script>
 
     <script src="/js/jalali-moment.browser.js"></script>
     
@@ -162,12 +162,7 @@
             <script>
                 const cData = {
                     ipercent : 20 ,                     
-                    _sclass : ()=>{
-                        const sClass = 'c100 p' + percent + ' small green float-left'
-                        console.log('percent' , percent , sclass)
-                        return sClass;
-                    } , 
-                    sclass : 'class ' + ipercent 
+                 
                 }
             </script>
             <div class="col-md-4 mb-3">
@@ -176,8 +171,8 @@
                         circle percent using csi include
                     </div>
                     <div class="card-body">
-                        <div x-data="cData">
-                            <span x-text="sclass"></span>
+                        <div x-data="">
+                            <span ></span>
                             <!-- <div data-include="circle.html" ></div> -->
                         </div>
                     </div>
@@ -213,6 +208,42 @@
             </div>
 
 
+            <!-- add logic in a script tag -->
+            <script>
+                const cLogic = ()=>{
+                    return {
+                        name : 'ali' , 
+                        change(){
+                            this.name = 'sahar'
+                            console.log('change name to sahar')
+                        }
+                    }
+                }; // cLogic
+            </script>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        title
+                    </div>
+                    <div class="card-body" x-data="cLogic">
+                        <div>
+                            <span x-text="name"></span>
+                        </div>
+                        <button class="btn btn-success" x-on:click="change()">change name</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        title
+                    </div>
+                    <div class="card-body">
+                        data
+                    </div>
+                </div>
+            </div>
 
             <div class="col-md-4 mb-3">
                 <div class="card">
