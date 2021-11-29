@@ -1,10 +1,27 @@
 console.log('app.js');
 
+
+//  navigo router
+const router = new Navigo('/');
+
+router.on('/', function () {
+    console.log('home');
+});
+
+router.on('/test', function () {
+    console.log('test');
+});
+
+router.resolve();
+
+// router.navigate('/test');
+
+
+
+
+
+
 var start_shamsi = '1400/08/23' ;
-
-
-
-
 
 
 const today = ()=>{
